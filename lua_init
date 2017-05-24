@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mkdir $1
+cd    $1
+lua_init.lua
+git init
+git add *
+git remote add $1 git@github.com:vojiranto/$1.git
+commit $1
+chmod ugo+rwx main.lua
